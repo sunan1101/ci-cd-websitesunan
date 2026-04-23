@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Sunan M K K</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: #0f172a;
+      color: #fff;
+    }
+
+    header {
+      background: #020617;
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #38bdf8;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #38bdf8;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+    }
+
+    .about, .projects, .contact {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .projects .card {
+      background: #1e293b;
+      padding: 20px;
+      margin-top: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .projects .card:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Sunan M K K</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Project</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h2>Halo, Saya <span>Sunan M K K</span></h2>
+  <p>Web Developer | Designer | Freelancer</p>
+  <button class="btn" onclick="scrollToSection('contact')">Hubungi Saya</button>
+</section>
+
+<section id="about" class="about">
+  <h2>Tentang Saya</h2>
+  <p>Saya adalah seorang developer yang fokus pada pembuatan website modern, responsif, dan user-friendly.</p>
+</section>
+
+<section id="projects" class="projects">
+  <h2>Project Saya</h2>
+
+  <div class="card">
+    <h3>Website Company Profile</h3>
+    <p>Membuat website perusahaan modern dengan tampilan profesional.</p>
+  </div>
+
+  <div class="card">
+    <h3>Aplikasi To-Do List</h3>
+    <p>Aplikasi sederhana untuk mencatat tugas harian menggunakan JavaScript.</p>
+  </div>
+
+  <div class="card">
+    <h3>Landing Page Produk</h3>
+    <p>Landing page menarik untuk meningkatkan konversi penjualan.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Kontak</h2>
+  <p>Email: sunan@example.com</p>
+  <p>WhatsApp: 08xxxxxxxxxx</p>
+</section>
+
+<footer>
+  <p>© 2026 Sunan M K K. All Rights Reserved.</p>
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
+  // Efek navbar berubah saat scroll
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    header.style.background = window.scrollY > 50 ? '#020617cc' : '#020617';
+  });
+</script>
+
+</body>
+</html>
